@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Personal Portfolio (SASS)</title>
+  <meta charset="UTF-8">
+<meta name="google" value="notranslate">
+<title>CodePen - Barakat Web Design Studio - Portfolio Zipline</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet prefetch' href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'>
+  
+  
+  <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+
+      <style>
+      /*body,*/
+h1,
+h2,
+h3,
+h4 {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700;}
+
+.topnav {
+	font-size: 16px;
+	border-bottom: 1px outset rgba(192, 192, 192, 0.5);
+	background: rgba(192, 192, 192, 0.9);
+	box-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.topnav ul.navbar-nav li a {
+	background: rgba(28, 28, 28, 0.1);
+	color: #000;
+}
+
+.topnav ul.navbar-nav li a:hover,
+.topnav ul.navbar-nav li a:focus {
+	background: rgba(255, 255, 255, 0.5);
+	color: #000;
+}
+/**/
+
+.topnav .navbar-brand {
+	background: rgba(28, 28, 28, 0.0);
+	color: #000;
+}
+
+.topnav .navbar-brand:hover,
+.topnav .navbar-brand:focus {
+	background: rgba(255, 255, 255, 0.5);
+	color: #000;
+}
+
+.lead {
+	font-size: 18px;
+	font-weight: 400;
+}
+/*top background*/
+
+.intro-header {
+	height: 855px;
+	padding-top: 50px;
+	/* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+	
+	padding-bottom: 50px;
+	text-align: center;
+	background: url('https://farm2.staticflickr.com/1305/5185370545_0a7a84889b_o_d.jpg') no-repeat center center fixed;
+	background-size: cover;
+	height: 855px;
+}
+/*Capa negra, 0.3 de transparencia, altura de 855px*/
+
+.bg-overlay {
+	background: rgba(0, 0, 0, 0.3);
+	height: 855px;
+}
+
+.bg-alpha {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.intro-message {
+	position: relative;
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+/*Big header*/
+/*Propiedades para h1 hijo de .intro-message*/
+
+.intro-message > h1 {
+	margin-top: -50px;
+	text-shadow: 2px 1px 2px #000;
+	font-size: 5em;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.intro-divider {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*small header*/
+
+.intro-message > h3 {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	color: black;
+}
+
+@media(max-width:767px) {
+	.intro-message {
+		padding-bottom: 15%;
+	}
+	.intro-message > h1 {
+		font-size: 3em;
+	}
+	ul.intro-social-buttons > li {
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+	ul.intro-social-buttons > li:last-child {
+		margin-bottom: 0;
+	}
+	.intro-divider {
+		width: 100%;
+	}
+}
+/*line*/
+
+hr.intro-divider {
+	border: 1px outset rgba(255, 255, 255, 0.2);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	width: 100%;
+}
+/* social buttons */
+
+.btn {
+	display: inline-block;
+	color: #000;
+	border: 2px outset rgba(0, 0, 0, 0.9);
+	background: #C0C0C0;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+	letter-spacing: 2px;
+	transition: 0.2s;
+}
+
+.btn:hover {
+	color: #fff;
+	border: 2px outset rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.9);
+	transform: scale(1.1);
+	transition: 0.2s;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+	letter-spacing: 2px;
+}
+/*section 2*/
+
+.content-section-a {
+	padding: 50px 0;
+	background: url('http://static.panoramio.com/photos/original/1807463.jpg') no-repeat center center fixed;
+	background-size: cover;
+	height: 855px;
+}
+
+.bg-overlay2 {
+	margin-top: -50px;
+	background: rgba(255, 255, 255, 0.2);
+	height: 855px;
+}
+/*self-taught*/
+
+.container .link {
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.container .link:hover {
+	color: rgb(0, 0, 128);
+	font-weight: bold;
+	font-size: 22.5px;
+}
+
+h2.section-heading {
+	margin-top: 100px;
+	font-size: 3em;
+	color: rgba(0, 0, 0, 0.9);
+}
+/*text*/
+
+.content-section-a p {
+	font-size: 22px;
+	font-weight: bold;
+	color: #000;
+}
+
+.content-section-a p a {
+	color: silver;
+	font-weight: bold;
+}
+/*profile picture*/
+
+.img-circle {
+	margin-top: 150px;
+	border: 1px outset rgba(255, 255, 255, 0.3);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+/* Portfolio section*/
+
+section {
+	color: black;
+	background: url('http://www.mrwallpaper.com/wallpapers/gradient-background.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+#below-section {
+	color: #000;
+}
+
+#small-text {
+	color: white;
+}
+/*.portfolio-item {
+  overflow: hidden;
+  padding: 7px;
+  color: white;
+  height: 308px;
+}*/
+/*Portfolio items*/
+
+#portfolio .portfolio-item {
+	margin: 0 0 15px;
+	right: 0;
+	border: 1px outset rgba(255, 255, 255, 0.6);
+}
+
+#portfolio .portfolio-item:hover {
+	transition: 0.5s;
+	box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.9);
+}
+
+#portfolio .portfolio-item .portfolio-link {
+	display: block;
+	position: relative;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+	background: rgba(0, 0, 0, .7);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all ease .5s;
+	-webkit-transition: all ease .5s;
+	-moz-transition: all ease .5s,
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+	opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	font-size: 20px;
+	text-align: center;
+	top: 50%;
+	margin-top: -12px;
+	color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+	margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+	margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+	max-width: 400px;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	padding: 25px;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+	color: #fff;
+	text-transform: none;
+	margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	margin: 0;
+}
+
+#portfolio * {
+	z-index: 2;
+}
+
+@media (min-width:767px) {
+	#portfolio .portfolio-item {
+		margin: 0 0 30px;
+	}
+}
+
+.col-md-4:hover {
+  transition: 0.5s;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);  
+}*/
+
+.section-heading-spacer {
+	float: left;
+	width: 200px;
+	border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+	padding: 100px 0;
+	background: url('https://static.pexels.com/photos/2170/creative-desk-pens-school.jpg') no-repeat center center fixed;
+	background-size: cover;
+	height: 755px;
+}
+
+.bg-overlay4 {
+	margin-top: -100px;
+	padding: 100px 0;
+	background: rgba(255, 255, 255, 0.3);
+	height: 755px;
+}
+
+.banner ul {
+	margin-bottom: 0;
+}
+
+.banner-social-buttons {
+	float: right;
+	margin-top: 0;
+}
+
+@media(max-width:1199px) {
+	ul.banner-social-buttons {
+		float: left;
+		margin-top: 15px;
+	}
+}
+
+ul.banner-social-buttons > li {
+	display: block;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+ul.banner-social-buttons > li:last-child {
+	margin-bottom: 0;
+}
+
+h2.connect {
+	margin: 0;
+	color: rgba(0, 0, 0, 0.9);
+}
+
+footer {
+	padding: 50px 0;
+	background: rgba(192, 192, 192, 0.9);
+}
+
+p.copyright {
+	margin: 15px 0 0;
+}
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+  
+   <div class="container topnav">
+     <!-- Brand and toggle get grouped for better mobile display -->
+	 <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand topnav" target="_blank">Jose Barakat</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#home">Inicio</a>
+				</li>
+				<li>
+					<a href="#about">Sobre Mi</a>
+				</li>
+				<li>
+					<a href="#portfolio">Portafolio</a>
+				</li>
+				<li>
+					<a href="#contact">Contáctame</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+</nav>
+</nav>
+
+<!-- Header -->
+<a name="home"></a>
+<div class="intro-header">
+	<div class="bg-overlay">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="intro-message">
+						<div class="bg-alpha">
+							<h1>Barakat Web Design Studio</h1>
+							<h3 id="moto">Un compromiso con 
+								la excelencia en el diseño.</h3>
+						</div>
+						<hr class="intro-divider">
+						<ul class="list-inline intro-social-buttons">
+							<li>
+								<a href="https://twitter.com/JoseBarakat" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+							</li>
+							<li>
+								<a href="https://github.com/JoseBarakat" target="_blank" class="btn btn-default btn-lg "><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/jose-barakat-a79b1890" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+							</li>
+							<li>
+								<a href="https://www.freecodecamp.com/josebarakat" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-fire fa-fw"></i> <span class="network-name">freeCodeCamp</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container -->
+	</div>
+</div>
+<!-- /.intro-header -->
+
+
+<!-- Page Content -->
+
+<a name="about"></a>
+<div class="content-section-a">
+	<div class="bg-overlay2">
+		<div class="container bg-alpha">
+			<div class="row">
+				<div class="col-lg-5 col-sm-6">
+
+					<div class="clearfix"></div>
+					<h2 class="section-heading">Barakat Web Design Studio.</h2>
+					</br>
+					<p class="lead">Soy un <a class="link" target="_blank" href="https://www.freecodecamp.com/josebarakat">Desarrollador Web</a> residenciado en Colombia.</br>
+						Actualmente soy parte de un pequeño grupo de desarrollo web, encargado de aplicaciones web y móbiles.</br>
+						</br>
+						Mi campo de estudio y trabajo se centra en las soluciones digitales basadas en las actuales tecnologías de la información con el objetivo de resolver los distintos retos del mundo real.</br>
+						</br>
+						Competencias:</br>
+						Lenguajes y Frameworks:</br>
+						HTML, CSS, JavaScript. jQuery, JSON, Bootstrap.</br>
+						GitHub, CodePen.
+					</p>
+				</div>
+				<div class="col-lg-5 col-lg-offset-2 col-sm-6 collapse navbar-collapse">
+					<img class="img-circle img-responsive" src="https://lh3.googleusercontent.com/GjzzpkkccEdMmpuetd6iHeK7-O_QUJ7-3CNPfYjgCBlMFP7tpzKWIXJsnV4CxGYnEg_Qm3YqRCIKcqvRTl-Idp1qt7N7wMXaQgZLD2pswkb11fdJGJkdE6CS2Ir6z6-Rdme__fmOEATmpoRxp6252CL32FzPV_93aaqpzZ7yYf4eX9TO2DmE-__Y9rEhqjC-Il3YqViOXXjxbVSd7CRzt1RMInN4zUU5IuYyAgkZ840CRqwesiO-QOb_S3f4gF5JsNzW5T_tHRYAo2nCkOnedJ0mwSiPPtav8Yb3M93X0PWAdL6ySeT2qwpXKlBXug7ACy3rclLgRcOvLiFwfW_Ur9WuGpHKXClFYsSdxSy3tQzx9YQH0PN2Q_CQdC2Yto6DqVTpfJ3d4rXLBqnPXAoAn6DkRc8BbmDCBnWc4gmLpDGfjwli3ND7N2zzx-b0r1sPUJqid4c8wpNfniQiG85fQv9r-0EdhvDJJJ4dxiJQsnvwlDsjxy7SrOOflvV8zeBKKIgJc2kke-SPfTkAzijIaKevk3Z_5DvrO5uUwtHPIOKo=w331-h342-no"
+						alt="">
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container -->
+	</div>
+</div>
+</div>
+
+<!-- Portfolio Grid Section -->
+<a name="portfolio"></a>
+<section id="portfolio" class="bg-light-gray bounds">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">Portafolio.</h2>
+				<h3 id="below-section" class="section-subheading text-muted">Proyectos Recientes:</h3>
+			</div>
+		</div>
+		<!-- Portfolio img1 -->
+		<div class="row">
+			<div class="col-md-4 col-sm-6 portfolio-item">
+				<a href="https://codepen.io/JoseBarakat/full/ZQzQEr" target="_blank" class="portfolio-link" data-toggle="modal">
+					<div class="portfolio-hover">
+						<div class="portfolio-hover-content">
+							<i class="fa fa-fire fa-3x"></i>
+						</div>
+					</div>
+					<img class="img-thumbnail" src="https://i1377.photobucket.com/albums/ah73/JoseBarakat/Portfolio%20Images/JSCalc_zpsubfbmbjl.png" alt="">
+				</a>
+				<div class="portfolio-caption">
+					<h4>JavaScript Calculator</h4>
+					<p id="small-text" class="text-muted">HTML, CSS & JavaScript</p>
+				</div>
+			</div>
+			<!-- End of Portfolio img1 -->
+
+			<!-- Portfolio img2 -->
+			<div class="col-md-4 col-sm-6 portfolio-item portfolio2">
+				<a href="https://codepen.io/ThiagoFerreir4/full/vOyXre" class="portfolio-link" target="_blank" data-toggle="modal">
+					<div class="portfolio-hover">
+						<div class="portfolio-hover-content">
+							<i class="fa fa-fire fa-3x"></i>
+						</div>
+					</div>
+					<img src="http://res.freestockphotos.biz/pictures/11/11423-a-yin-yang-symbol-with-a-transparent-background-pv.png" class="img-responsive" alt="">
+				</a>
+				<div class="portfolio-caption">
+					<h4>Nombre del Proyecto</h4>
+					<p id="small-text" class="text-muted">Bootstrap and jQuery</p>
+				</div>
+			</div>
+			<!-- End of Portfolio img2 -->
+
+			<!-- Portfolio img3 -->
+			<div class="col-md-4 col-sm-6 portfolio-item">
+				<a href="https://codepen.io/ThiagoFerreir4/full/QbKWGO" target="_blank" class="portfolio-link" data-toggle="modal">
+					<div class="portfolio-hover">
+						<div class="portfolio-hover-content">
+							<i class="fa fa-fire fa-3x"></i>
+						</div>
+					</div>
+					<img src="http://res.freestockphotos.biz/pictures/11/11423-a-yin-yang-symbol-with-a-transparent-background-pv.png" class="img-responsive" alt="">
+				</a>
+				<div class="portfolio-caption">
+					<h4>Nombre del Proyecto</h4>
+					<p id="small-text" class="text-muted">SCSS and Vanilla Javascript</p>
+				</div>
+			</div>
+			<!-- End of Portfolio img3 -->
+
+			<!-- Portfolio img4 -->
+			<div class="col-md-4 col-sm-6 portfolio-item">
+				<a href="https://codepen.io/ThiagoFerreir4/full/vOaRQz/" target="_blank" class="portfolio-link" data-toggle="modal">
+					<div class="portfolio-hover">
+						<div class="portfolio-hover-content">
+							<i class="fa fa-fire fa-3x"></i>
+						</div>
+					</div>
+					<img src="http://res.freestockphotos.biz/pictures/11/11423-a-yin-yang-symbol-with-a-transparent-background-pv.png" class="img-responsive" alt="">
+				</a>
+				<div class="portfolio-caption">
+					<h4>Nombre del Proyecto</h4>
+					<p id="small-text" class="text-muted">Bootstrap and Angular.js</p>
+				</div>
+			</div>
+			<!-- End of Portfolio img4 -->
+
+			<!-- Portfolio img5 -->
+			<div class="col-md-4 col-sm-6 portfolio-item">
+				<a href="https://codepen.io/ThiagoFerreir4/full/oXwKJV" target="_blank" class="portfolio-link" data-toggle="modal">
+					<div class="portfolio-hover">
+						<div class="portfolio-hover-content">
+							<i class="fa fa-fire fa-3x"></i>
+						</div>
+					</div>
+					<img src="http://res.freestockphotos.biz/pictures/11/11423-a-yin-yang-symbol-with-a-transparent-background-pv.png" class="img-responsive" alt="">
+				</a>
+				<div class="portfolio-caption">
+					<h4>Nombre del Proyecto</h4>
+					<p id="small-text" class="text-muted">Bootstrap and Vanilla Javascript</p>
+				</div>
+			</div>
+			<!-- End of Portfolio img5 -->
+
+			<!-- Portfolio img6 -->
+			<div class="col-md-4 col-sm-6 portfolio-item">
+				<a href="https://codepen.io/ThiagoFerreir4/full/EjwGoX/" target="_blank" class="portfolio-link" data-toggle="modal">
+					<div class="portfolio-hover">
+						<div class="portfolio-hover-content">
+							<i class="fa fa-fire fa-3x"></i>
+						</div>
+					</div>
+					<img src="http://res.freestockphotos.biz/pictures/11/11423-a-yin-yang-symbol-with-a-transparent-background-pv.png" class="img-responsive" alt="">
+				</a>
+				<div class="portfolio-caption">
+					<h4>Nombre del Proyecto</h4>
+					<p id="small-text" class="text-muted">CSS and jQuery</p>
+				</div>
+			</div>
+			<!-- End of Portfolio img6 -->
+		</div>
+	</div>
+</section>
+
+<a name="contact"></a>
+<div class="banner">
+	<div class="bg-overlay4">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h2 class="connect">Contácta con Barakat Web Design Studio: josebarakat@gmail.com</h2>
+				</div>
+				</br>
+
+				<div class="col-lg-6">
+					<ul class="list-inline banner-social-buttons">
+						<li>
+							<a href="https://twitter.com/josebarakat" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+						</li>
+						<li>
+							<a href="https://github.com/JoseBarakat" target="_blank" class="btn btn-default btn-lg "><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/jose-barakat-a79b1890" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+						</li>
+						<li>
+							<a href="https://www.freecodecamp.com/josebarakat" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-fire fa-fw"></i> <span class="network-name">freeCodeCamp</span></a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- /.container -->
+		</div>
+	</div>
+</div>
+</div>
+<!-- /.banner -->
+
+<!-- Footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="list-inline">
+					<li>
+						<a href="#">Inicio</a>
+					</li>
+					<li class="footer-menu-divider">&sdot;</li>
+					<li>
+						<a href="#about">Sobre Mi</a>
+					</li>
+					<li class="footer-menu-divider">&sdot;</li>
+					<li>
+						<a href="#portfolio">Portafolio</a>
+					</li>
+					<li class="footer-menu-divider">&sdot;</li>
+					<li>
+						<a href="#contact">Contáctame</a>
+					</li>
+				</ul>
+				<p class="copyright text-muted small">Copyright &copy; Barakat Web Design Studio 2015. All Rights Reserved</p>
+			</div>
+		</div>
+	</div>  
+</footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+
+</body>
+</html>
+ 
